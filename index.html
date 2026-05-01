@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chat App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="loginPage" class="login">
+    <div class="login-box">
+        <h2>Login</h2>
+
+        <input id="username" placeholder="Enter Username">
+        <input id="password" type="password" placeholder="Enter Password">
+
+        <button onclick="login()">Login</button>
+    </div>
+</div>
+
+<div id="chatPage" class="app hidden">
+
+    
+    <div class="sidebar">
+        <div>
+            <h3 id="userLabel">User:</h3>
+        </div>
+
+        <button class="logout" onclick="logout()">Logout</button>
+    </div>
+
+
+    <div class="chat">
+        <h2>💬 Group Chat</h2>
+
+        <ul id="messages"></ul>
+
+        <div class="input-area">
+            <input id="msg" placeholder="Type message...">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
+</div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
